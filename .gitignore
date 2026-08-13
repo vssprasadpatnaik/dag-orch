@@ -3,3 +3,9 @@
 .idea/
 .vscode/
 .cursor/
+
+# POC runtime artifacts
+poc/logs/
+poc/**/*.sqlite
+__pycache__/
+*.pyc

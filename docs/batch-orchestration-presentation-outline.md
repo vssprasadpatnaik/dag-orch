@@ -3,6 +3,7 @@
 **Format:** Mixed audience (executive summary + technical appendix)  
 **Total time:** ~30 minutes (15 min executive + 15 min technical)  
 **Companion docs:**
+
 - [Architecture](./batch-orchestration-architecture.md)
 - [Book of Work](./batch-orchestration-book-of-work.md)
 
@@ -114,6 +115,8 @@ flowchart TB
   Ctrl --> W
 ```
 
+
+
 ---
 
 ## Slide 4a — Platform stack (how batches run today)
@@ -177,13 +180,15 @@ flowchart TB
 
 **On slide**
 
-| Release | Sprints | Outcome |
-|---------|---------|---------|
-| R0 | 0 | Pilot picked; `mf-sla v1` stub; **control/write-back spike starts** |
-| R1 | 1–2 | Daily Guard prediction + SLA chip; **non-prod Fast Lane POC** |
-| R2 | 3–4 | Live ingest + explanations + Teams; **Fast Lane eligible (recommend-only)** |
-| R3 | 5–6 | **Fast Lane execute (approved, audited)**; Radar; ~50 functions; Excel retired |
-| R4+ | 7+ | XGBoost shadow; reschedule; scale waves; 2nd-adapter readiness |
+
+| Release | Sprints | Outcome                                                                        |
+| ------- | ------- | ------------------------------------------------------------------------------ |
+| R0      | 0       | Pilot picked; `mf-sla v1` stub; **control/write-back spike starts**            |
+| R1      | 1–2     | Daily Guard prediction + SLA chip; **non-prod Fast Lane POC**                  |
+| R2      | 3–4     | Live ingest + explanations + Teams; **Fast Lane eligible (recommend-only)**    |
+| R3      | 5–6     | **Fast Lane execute (approved, audited)**; Radar; ~50 functions; Excel retired |
+| R4+     | 7+      | XGBoost shadow; reschedule; scale waves; 2nd-adapter readiness                 |
+
 
 **Speaker notes**
 
@@ -372,11 +377,13 @@ predicted_finish = predicted_start + runtime + uncertainty_buffer
 
 **On slide**
 
-| Role | Capabilities |
-|------|----------------|
-| User | Read-only board, filters, explanations, subscribe |
-| SRE | At-risk queue, graph, simulate, approve actions, audit |
-| Leadership | Weekly SLA %, delay taxonomy, intervention count |
+
+| Role       | Capabilities                                           |
+| ---------- | ------------------------------------------------------ |
+| User       | Read-only board, filters, explanations, subscribe      |
+| SRE        | At-risk queue, graph, simulate, approve actions, audit |
+| Leadership | Weekly SLA %, delay taxonomy, intervention count       |
+
 
 **Speaker notes**
 
@@ -427,12 +434,14 @@ predicted_finish = predicted_start + runtime + uncertainty_buffer
 
 **On slide**
 
-| Theme | Key epics |
-|-------|-----------|
-| A — Discovery & catalog | Pilot catalog, baseline KPIs, integration spec, POC handoff (continuous, not a gate) |
-| B — Beacon Core & Control | Registry, Ingest, Graph, Predict, Policy (Core); Fast Lane + Actions (Control) |
-| C — Consumer / portal | Daily Guard MVP, Radar overlays, SLA board, analytics |
-| D — Scale & hardening | Rollout waves, model ops, HA, **2nd adapter bundle** |
+
+| Theme                     | Key epics                                                                            |
+| ------------------------- | ------------------------------------------------------------------------------------ |
+| A — Discovery & catalog   | Pilot catalog, baseline KPIs, integration spec, POC handoff (continuous, not a gate) |
+| B — Beacon Core & Control | Registry, Ingest, Graph, Predict, Policy (Core); Fast Lane + Actions (Control)       |
+| C — Consumer / portal     | Daily Guard MVP, Radar overlays, SLA board, analytics                                |
+| D — Scale & hardening     | Rollout waves, model ops, HA, **2nd adapter bundle**                                 |
+
 
 **Speaker notes**
 

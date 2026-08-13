@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mf-sla-contract"
+version = "1.0.0"
+description = "Canonical mf-sla v1 contract: entities + ports (the BICP product surface)"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "BICP Platform" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["mf_sla_contract*"]
